@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block title %}Article Delete{% endblock %}
+    {% block content %}
+    <h1>Delete</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Are you want to delete "{{ article.title }}"</p>
+        <button class="bth bth-danger ml-2" type="submit">Confirm</button>
+    </form>
+    {% endblock %}
+</body>
+</html>

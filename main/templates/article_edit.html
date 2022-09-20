@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block title %}Article Edit{% endblock %}
+    {% block content %}
+    <h1>Edit</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="bth bth-info ml-2">Update</button>
+    </form>
+    {% endblock %}
+</body>
+</html>

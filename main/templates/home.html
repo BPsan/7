@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
 </head>
 <body>
   {% extends 'base.html' %}
@@ -10,14 +9,11 @@
   {% block title %}Home{% endblock %}
 
   {% block content %}
-  {% if user.is_authenticated %}
-    Hi {{ user.username }}!
-    <p><a href="{% url 'logout' %}">logout</a></p>
-  {% else %}
-    <p>You not shall pass</p>
-    <a href="{% url 'login' %}">login</a>
-    <a href="{% url 'signup' %}">signup</a>
-  {% endif %}
+  <div class="jumbotron">
+    <h1 class="display-4">Newspaper app</h1>
+    <p class="lead">A Newspaper website build with Django.</p>
+    <p class="lead"><a class="bth bth-primary bth-lg" href="{% url 'article_list' %}">View All Articles</a></p>
+  </div>
   {% endblock %}
 </body>
 </html>
